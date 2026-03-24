@@ -1,19 +1,30 @@
 .container {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
-
-.btn {
-  height: 50px;
-  width: 50px;
+.calcCont {
+  border-style: solid;
 }
-.operators {
+.calc {
+  background-color: rgb(19, 208, 54);
+  width: 280px;
+  height: 80px;
   display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: 2px solid;
 }
-.numbers {
-  display: flex;
-  flex-wrap: wrap;
+.btnCont {
+  display: grid;
+  height: 280px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 280px;
+  box-sizing: border-box;
+}
+.cell {
+  box-sizing: border-box;
 }
