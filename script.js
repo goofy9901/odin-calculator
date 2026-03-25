@@ -17,14 +17,11 @@ const btnCont = document.createElement("div");
 calcContainer.appendChild(btnCont);
 btnCont.classList = "btnCont";
 
-let n = 4;
+let btnText = ["C", "/", "*", "-", 7, 8, 9, "+", 4, 5, 6, "=", 1, 2, 3, 0];
 
-for (let i = 0; i < n * n; i++) {
+for (let i = 0; i < btnText.length; i++) {
   const cell = document.createElement("div");
   btnCont.appendChild(cell);
   cell.classList = "cell";
+  cell.textContent = btnText[i];
 }
-
-btnText = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "+", "-", "*", "/", "C", "="];
-
-for (let i = 0; i < btnText.length; i++) {}
