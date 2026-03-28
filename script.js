@@ -9,9 +9,9 @@ const calcContainer = document.createElement("div");
 container.appendChild(calcContainer);
 calcContainer.classList = "calcCont";
 
-const calculation = document.createElement("div");
-calcContainer.appendChild(calculation);
-calculation.classList = "calc";
+const display = document.createElement("div");
+calcContainer.appendChild(display);
+display.classList = "display";
 
 const btnCont = document.createElement("div");
 calcContainer.appendChild(btnCont);
@@ -24,4 +24,43 @@ for (let i = 0; i < btnText.length; i++) {
   btnCont.appendChild(cell);
   cell.classList = "cell";
   cell.textContent = btnText[i];
+  cell.addEventListener("click", function () {
+    display.textContent += cell.textContent;
+  });
 }
+
+const add = function (a, b) {
+  return a + b;
+};
+const subtract = function (a, b) {
+  return a - b;
+};
+const multiply = function (a, b) {
+  return a * b;
+};
+
+const divide = function (a, b) {
+  return a / b;
+};
+
+let number1 = "";
+let number2 = "";
+let result = "";
+let operator = "";
+
+const operate = function () {
+  switch (operator) {
+    case "+":
+      result = add(number1, number2);
+      break;
+    case "-":
+      result = subtract(number1, number2);
+      break;
+    case "*":
+      result = multiply(number1, number2);
+      break;
+    case "/":
+      result = divide(number1, number2);
+      break;
+  }
+};
